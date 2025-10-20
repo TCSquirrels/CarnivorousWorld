@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carnivorous World</title>
+  <link rel="stylesheet" href="style.css">
+ </head>
+ 
+ <body>
+	<a href="https://www.twitch.tv/tcsquirrels" target="_blank">
+		<img src="image/logo.png" alt="Logo" class="logo" title="Go to Twitch.tv/tcsquirrels">
+	  </a>
+    <div class="logo-info">Click the logo to visit my Twitch channel!</div>
+    	<div class="auth-container">
+
+       <input type="radio" id="signin" name="auth" checked>
+       <label for="signin">Sign In</label>
+
+       <input type="radio" id="signup" name="auth">
+       <label for="signup">Sign Up</label>
+
+  
+
+       <!-- Contenu Sign Up / Sign In -->
+        <div class="content" id="signup-content">
+       <h2>Sign Up</h2>
+       <form id="signup-form">
+       <input id="signup-username" type="text" placeholder="Username" required>
+       <input id="signup-email" type="email" placeholder="Email" required>
+       <input id="signup-password" type="password" placeholder="Password" required>
+       <button type="submit">Register</button>
+       </form>
+	      <div id="signup-message" style="margin-top:10px;"></div>
+        </div>
+        <!-- Welcome dashboard (hidden initially) -->
+        <div id="welcome-dashboard" style="display:none; margin-top:20px;">
+        <h2>Welcome, <span id="welcome-username"></span>!</h2>
+        <p id="quote-of-the-week"></p>
+        </div>
+
+        <div class="content" id="signin-content">
+        <h2>Sign In</h2>
+        <form id="signin-form">
+        <input type="text" id="signin-username" placeholder="Username" required>
+        <input type="password" id="signin-password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+        </form>
+        <div id="signin-message" style="margin-top:10px;"></div>
+        </div>
+        <!-- Logout button, hidden initially -->
+        <div id="logout-section" style="display:none; margin-top:10px;">
+        <button id="logout-btn">Logout</button>
+        </div>
+        </div>
+    </div>
+
+        <div class="tab-container">
+        <!-- tabs (5 for now) -->
+        <input type="radio" id="tab1" name="tab" checked>
+        <label for="tab1">Welcome to the carnivorous world</label>
+
+        <input type="radio" id="tab2" name="tab">
+        <label for="tab2">TCS share</label>
+
+       <input type="radio" id="tab3" name="tab">
+        <label for="tab3">Futur idea</label>
+
+       <input type="radio" id="tab4" name="tab">
+        <label for="tab4">Leaderboard</label>
+
+        <input type="radio" id="tab5" name="tab">
+        <label for="tab5">Auction House</label>
+
+        <!--about site/about me -->
+        <div class="content" id="content1">
+        <h2>Welcome to the carnivorous world</h2>
+        <p>The Carnivorous Squirrel present to you the Carnivorous world. I'm just learning coding and i hope to make it work starting with this website. I have big project in mind, but I'm so busy and burned that i'll go at a slow pace, Or more like what i considerate a slow pace. Normally, i would have a website running for 2026 if all go according to plan.
+        I hope to see you on it as often as possible.</p>
+        </div>
+        <!--TCS SHare tab-->
+        <div class="content" id="content2">
+       <h2>TCS share</h2>
+       <p>Soon a shareholder and number of share will apear here..</p>
+   	  	<label for="username-search">Search Username:</label>
+  	  	<input type="text" id="username-search" placeholder="Enter username...">
+
+        <div id="share-info" style="margin-top: 20px;"></div>
+   
+          <hr>
+
+         <!-- Logged-in user info -->
+         <div id="my-share-info" style="margin-top:20px; display:none;">
+           <h3>My Share Info</h3>
+           <p>Username: <span id="my-username"></span></p>
+           <p>Number of shares: <span id="my-shares"></span></p>
+            <p>Value of shares:<span id="my-value"></span>TCSP</p>
+            <p>Dividends earned:<span id="my-dividends"></span>TCSP</p>
+            <p>TCSpoints: <span id="my-tcspoints"></span>TCSP</p>
+          </div>
+  
+
+
+            </div>
+            <!--future tab and idea-->
+            <div class="content" id="content3">
+            <h2>Futur idea</h2>
+            <p>After this webpage is running, i will work on making my first video game.</p>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="content" id="content4">
+              <h2>Leaderboard</h2>
+              <div id="leaderboard-list"></div> 
+              </div>
+
+              <!-- Auction House  -->
+              <div class="content" id="content5">
+              <h2>Auction House</h2>
+              <p>Buy and sell TCS shares with other users in the Auction House!</p>
+             <div class="auction-house">
+  
+  
+              <form id="trade-form">
+               <p>Seller: <span id="current-seller"></span></p>
+
+                <label for="shares-amount">Number of shares:</label>
+               <input type="number" id="shares-amount" min="1" placeholder="Shares to sell" required>
+
+                <label for="price-per-share">Price per share (TCSP):</label>
+                <input type="number" id="price-per-share" min="1" placeholder="Price per share" required>
+
+                <button type="submit">Post Offer</button>
+                </form>
+
+                <h4>Current Offers</h4>
+                <div id="auction-board"></div>
+                </div>
+      
+                </div>
+              
+               </div>
+    
+    <script src="signup.js"></script>
+    <script src="signin.js"></script>
+    <script src="buyingoffer.js"></script>	
+    <script src="sellingoffer.js"></script>
+    <script src="script.js"></script>
+    <script src="TCSShare.js"></script>
+    <script src="leaderboard.js"></script>
+  </body>
+</html>
