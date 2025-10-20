@@ -1,0 +1,204 @@
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 190px; /* adapte selon la taille du logo */
+  height: auto;
+  z-index: 1000; /* pour qu’il soit au-dessus du contenu */
+}
+.logo-info{
+  position:absolute;
+  top: 240px; /* ajuster selon la taille du logo */
+  left: 30px;
+  color:#fff;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+
+
+.auth-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 5px;
+  z-index: 1000;
+}
+
+/* Cacher les boutons radio */
+.auth-container input[type="radio"] {
+  display: none;
+}
+
+/* --- Auth Tabs (Sign In / Sign Up) --- */
+.auth-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Hide radio buttons */
+.auth-container input[type="radio"] {
+  display: none;
+}
+
+/* Tab labels */
+.auth-container label {
+  padding: 10px 20px;
+  background: #1e1e1e;   /* sleek dark background */
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.auth-container label:hover {
+  background: #2a2a2a;
+  border-color: #666;
+}
+
+/* Active tab */
+#signup:checked + label,
+#signin:checked + label {
+  background: #fff;      /* active = white */
+  color: #000;           /* active = black text */
+  border-color: #ccc;
+  border-bottom: 1px solid #fff; /* seamless with box below */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+}
+
+/* --- Auth Content Panels --- */
+#signup-content, #signin-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #fff;
+  color: #000;
+  padding: 25px 20px;
+  border-radius: 0 6px 6px 6px;
+  border: 1px solid #ccc;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Active panel */
+#signup:checked ~ #signup-content,
+#signin:checked ~ #signin-content {
+  display: block;
+}
+
+/* Smooth fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenu Sign Up / Sign In */
+#signup-content, #signin-content {
+  display: none;
+  position: absolute;
+  top: 60px; /* juste en dessous du menu */
+  right: 20px;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  width: 250px;
+}
+
+/* Afficher le contenu actif */
+#signup:checked ~ #signup-content,
+#signin:checked ~ #signin-content {
+  display: block;
+}
+
+
+
+
+
+body {
+  background: #000;
+  color: #fff; /* couleur par défaut du texte hors onglets/contenus */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin-top: 240px;
+}
+
+/* Onglets */
+.tab-container label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 2px;
+  background: #fff; /* fond blanc */
+  color: #000;      /* texte noir */
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: background 0.3s;
+}
+
+.tab-container input[type="radio"] {
+  display: none;
+}
+.tab-container label:hover {
+  background: #ddd;
+}
+
+/* Contenu des onglets */
+.content {
+  display: none;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-top: none;
+  background: #fff; /* fond blanc */
+  color: #000;      /* texte noir */
+  border-radius: 0 0 8px 8px;
+}
+
+/* Afficher le contenu actif */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+  display: block;
+}
+
+/* Onglet actif */
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label,
+#tab4:checked + label,
+#tab5:checked + label {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-bottom: none;}
+
+/*leaderboard*/
+  #leaderboard-list table {
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+#leaderboard-list th, #leaderboard-list td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+}
+#leaderboard-list tr:last-child td {
+  border-bottom: none;
+}
