@@ -1,3 +1,54 @@
+
+nav.menu-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position:absolute;
+  top: 20px;
+  left: 300px;
+  z-index:1000;
+
+}
+nav.menu-nav ul li.btn {
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+  font-size: 18px;
+  background-color:#00ff00b0;
+  border-radius: 8px;
+  border-color: #FFFFFF;
+  padding: 10px 15px;
+}
+nav.menu-nav ul li.btn a {
+  text-decoration: none;
+  color: #ffffff;
+  
+}
+nav.menu-nav ul li.btn a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.5s linear, color 0.5s linear;
+}
+nav.menu-nav ul li.counter {
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+  font-size: 18px;
+  background-color:#00ff00b0;
+  border-radius: 8px;
+  border-color: #FFFFFF;
+  padding: 10px 15px;
+  }
+  nav.menu-nav ul li.counter img {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 100px;
+    height: 24px;
+    margin: 10px;
+  }
+
+
+
 .logo {
   position: absolute;
   top: 20px;
@@ -66,6 +117,7 @@
 .auth-container label:hover {
   background: #2a2a2a;
   border-color: #666;
+  transition: all 0.2s ease;
 }
 
 /* Active tab */
